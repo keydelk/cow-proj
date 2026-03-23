@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
 # Simple Cowsay program to test venvs
-from cowsay import cow
+import cowsay
 
-cow("Mooo!")
+cowsay.cow("Moo")
