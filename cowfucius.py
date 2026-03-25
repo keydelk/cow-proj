@@ -2,6 +2,7 @@
 # Ask the wise Cowfucius for advice
 
 import sys
+import textwrap
 import cowsay
 from google import genai
 from google.api_core import exceptions
@@ -24,8 +25,9 @@ try:
 
     # FinishReason 1 is 'STOP' (Success)
     if candidate.finish_reason == "STOP":
+        wrapped_advise = textwrap.fill(response.text, width=40)
         print("Cowfucius says:")
-        cowsay.cow(response.text)
+        cowsay.cow(wrapped_advise)
     else:
         print(f"Cowfucius is silent. Reason: {candidate.finish_reason}")
 
