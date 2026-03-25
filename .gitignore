@@ -1,5 +1,6 @@
 .env
+.envrc
 __pycache--/
 *.pyc
-.venv/
-venv
+cowproj/
+cowproj
