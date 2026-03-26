@@ -1,6 +1,41 @@
+# --- Security & Environment ---
+# NEVER commit these (especially after the recent leak!)
 .env
 .envrc
-__pycache--/
-*.pyc
-cowproj/
-cowproj
+*.pem
+*.key
+
+# --- Python & Virtual Environments ---
+__pycache__/
+*.py[cod]
+*$py.class
+# Even though uv manages it, the .venv is local to each machine
+.venv/
+env/
+venv/
+build/
+dist/
+*.egg-info/
+
+# --- UV Specific ---
+# DO NOT ignore uv.lock or pyproject.toml; they are needed for syncing
+.uv/
+
+# --- Editor Specific (Doom Emacs) ---
+# Emacs backup and lock files
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.projectile
+.python-version
+
+# --- OS Specific ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
